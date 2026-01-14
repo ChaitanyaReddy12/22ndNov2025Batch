@@ -1,7 +1,7 @@
 Feature: Hooks Feature
 
-Background: background scenario
-# Given I launch the browser
+    Background: background scenario
+    # Given I launch the browser
 
     @method
     Scenario: Verify data reading from the test data file
@@ -16,6 +16,26 @@ Background: background scenario
             | leela       | leela@gmail.com       | 5678956789 | Chennai    | Selenium   | text should not exceed 100 characters |
             | dhanasekhar | dhanasekhar@gmail.com | 5678567856 | Kukatpalli | java       | text should not exceed 100 characters |
             | divine      | divine@gmail.com      | 6789067890 | kerala     | typescript | text should not exceed 100 characters |
+            | divine      | divine@gmail.com      | 6789067890 | kerala     | typescript | text should not exceed 100 characters |
+
+
+    @method
+    Scenario: Verify data reading from the test data file1
+        And I Verify test data reading from the feature file1 "<username>","<password>"
+        And I close the browser
+
+        Examples:
+            | username | password |
+            | Admin    | admin123 |
+
+    @method
+    Scenario: Verify data reading from the test data file1
+        And I Verify test data reading from the feature file1 "<username>","<password>"
+        And I close the browser
+
+        Examples:
+            | username | password |
+            | Admin    | admin123 |
 
     @method
     Scenario: Verify data reading from the test data file1
